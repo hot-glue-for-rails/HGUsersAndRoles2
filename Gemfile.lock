@@ -195,6 +195,8 @@ GEM
     nio4r (2.6.0)
     nokogiri (1.15.4-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.15.4-x86_64-linux)
+      racc (~> 1.4)
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
@@ -355,6 +357,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  x86_64-linux
 
 DEPENDENCIES
   active_record_query_trace (~> 1.8)
