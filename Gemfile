@@ -92,3 +92,5 @@ gem "rubycritic", "~> 4.9", :group => :dev
 gem "hot-glue", "~> 0.6.0"
 
 gem "cssbundling-rails", "~> 1.3"
+
+gem "kaminari", "~> 1.2", :git => "https://github.com/jasonfb/kaminari.git", :branch => "master"
