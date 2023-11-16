@@ -1,0 +1,21 @@
+<div class='col-sm-2 user--name'> <%= user.name %></div>
+<div class='col-sm-2 user--roles'> <%= user.roles.collect(&:label).join(", ") %></div>
+
+
+
+
+
+
+<div class=" scaffold-line-buttons col-md-2" >
+  
+
+  
+    <%= form_with url: user_path(user), html: {data: {'turbo-confirm': "Are you sure you want to delete #{ user.name }?"}, style: "display: inline-block;"}, method: :delete do |f| %>
+      <%= f.submit "Delete".html_safe,  class: "delete-user-button btn btn-primary btn-sm" %>
+    <% end %>
+  
+
+  
+  <%= link_to "Edit ".html_safe, edit_user_path(user), disable_with: "Loading...", class: "edit-user-button btn btn-primary btn-sm" %>
+  
+</div>

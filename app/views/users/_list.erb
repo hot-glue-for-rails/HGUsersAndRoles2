@@ -1,0 +1,39 @@
+<%= turbo_frame_tag "__users-list"   do %>
+  <div class="container ">
+    
+      <h4>
+        USERS
+      </h4>
+    
+
+    <%= render partial: "users/new_button", locals: {} %><br />
+
+    
+      
+        <div class="row ">
+          <div class='col-sm-2 heading--user--name' >Name</div>
+<div class='col-sm-2 heading--user--roles' >Roles</div>
+
+          
+
+          <div class=' scaffold-col-heading scaffold-col-heading-buttons col-sm-2' >
+          </div>
+        </div>
+      
+
+      <% if users.empty? %>
+    <div>
+        None
+    </div>
+      <% end %>
+      <% users.each do |user| %>
+        <%= render partial: 'users/line', locals: {user: user}
+            .merge(defined?(nested_for) ? {nested_for: nested_for} : {})
+      
+        %>
+      <% end %>
+      
+    <% if users.respond_to?(:total_pages) %><%= paginate(users) %> <% end %>
+  
+  </div>
+<% end %>

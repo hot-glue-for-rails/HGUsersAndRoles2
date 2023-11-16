@@ -1,0 +1,27 @@
+<div class="row">
+  <div class='col-md-2 cell--user--name' >  
+    <span class='<%= "alert alert-danger" if user.errors.details.keys.include?(:name) %>'  style="display: inherit;"  >
+       <br />
+        <%= f.text_field :name, value: user.name, autocomplete: 'off', size: 40, class: 'form-control', type: '' %>
+       
+      
+      <label class='text-muted small form-text' for=''>Name</label>
+    </span>
+    <br />
+  </div>
+  <div class='col-md-2 cell--user--roles' >  
+    <span class='<%= "alert alert-danger" if user.errors.details.keys.include?(:roles) %>'  style="display: inherit;"  >
+       <br />
+       <%= f.collection_check_boxes :role_ids, Role.all, :id, :label, {} do |m| %>
+            <%= m.check_box %> <%= m.label %><br />
+          <% end %>
+      <label class='text-muted small form-text' for=''>Roles</label>
+    </span>
+    <br />
+  </div>
+
+  <div class="col-md-2">
+    <%= link_to "Cancel", users_path,  {class: "btn btn-secondary"} %>
+    <%= f.submit "Save", class: "btn btn-primary pull-right" %>
+  </div>
+</div>
