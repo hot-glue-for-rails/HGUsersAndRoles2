@@ -89,10 +89,10 @@ gem "byebug", "~> 11.1", :groups => [:development, :test]
 
 gem "rubycritic", "~> 4.9", :group => :dev
 
-gem "hot-glue", "~> 0.6.0"
+# gem "hot-glue", "~> 0.6.0"
+
+gem "hot-glue", path: "/Users/jason/Work/Hot_Glue/hot-glue-private"
 
 gem "cssbundling-rails", "~> 1.3"
-
 gem "kaminari", "~> 1.2", :git => "https://github.com/jasonfb/kaminari.git", :branch => "master"
-
 gem "nonschema_migrations", "~> 6.5"
