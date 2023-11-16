@@ -197,6 +197,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
+    nonschema_migrations (6.5)
+      rails (> 5.1)
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
@@ -375,6 +377,7 @@ DEPENDENCIES
   jsbundling-rails
   kaminari (~> 1.2)!
   launchy (~> 2.5)
+  nonschema_migrations (~> 6.5)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.8)
